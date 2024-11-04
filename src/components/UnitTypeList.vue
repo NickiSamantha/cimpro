@@ -39,7 +39,7 @@ export default {
 
       this.unitTypes = unitTypesData;
 
-      // Organize booking units by Unit Type ID for easy access
+      // Organize booking units by Unit Type ID 
       this.bookingUnits = bookingUnitsData.reduce((acc, unit) => {
         if (!acc[unit['Unit Type ID']]) {
           acc[unit['Unit Type ID']] = [];

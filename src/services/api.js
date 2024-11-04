@@ -12,19 +12,25 @@ const headers = {
 };
 
 export const getUnitTypes = async () => {
-  const response = await axios.post(
-    `${API_BASE_URL}/unit_type_info_request`,
-    { hg_code: "demo", payload: {} },
-    { headers }
-  );
-  return response.data.payload["Unit Types"];
+  try {
+    const response = await axios.post(`${API_BASE_URL}/unit_type_info_request`, { hg_code: "demo", payload: {} }, { headers });
+    return response.data.payload["Unit Types"];
+  } catch (error) {
+    throw new Error("Failed to fetch unit types");
+  }
 };
 
+
 export const getBookingUnits = async () => {
-  const response = await axios.post(
-    `${API_BASE_URL}/get_booking_units_request`,
-    { hg_code: "demo", payload: {} },
-    { headers }
-  );
-  return response.data.payload["Booking Units"];
+  try {
+    const response = await axios.post(
+      `${API_BASE_URL}/get_booking_units_request`,
+      { hg_code: "demo", payload: {} },
+      { headers }
+    );
+    return response.data.payload["Booking Units"];
+  } catch (error) {
+    console.error("Error fetching booking units:", error);
+    throw new Error("Failed to fetch booking units");
+  }
 };
