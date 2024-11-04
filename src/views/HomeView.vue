@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1> Available Unit Types</h1>
+    <UnitTypeList/>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+/* eslint-disable*/
+import UnitTypeList from '@/components/UnitTypeList.vue';
 export default {
-  name: 'HomeView',
   components: {
-    HelloWorld
+    UnitTypeList
   }
 }
 </script>
+<style scoped>
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+</style>
