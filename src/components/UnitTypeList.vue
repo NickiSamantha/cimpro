@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>Unit Types</h1>
-    <ul>
+    <!-- <h1>Unit Types</h1> -->
+     <div v-if="error">{{ error }}</div> 
+    <ul v-else>
       <li v-for="unitType in unitTypes" :key="unitType['Unit Type ID']">
         <h2>{{ unitType['Unit Type Description'] }} ({{ unitType['Unit Type Code'] }})</h2>
         <p>Category{{ unitType['Unit Type Category'] }}</p>
@@ -21,20 +22,21 @@
 </template>
 
 <script>
-import { getUnitTypes, getBookingUnits } from '../services/api.js';
+import { getUnitTypeInfoRequest, getBookingUnitsRequest } from '../services/api.js';
 
 export default {
   data() {
     return {
       unitTypes: [],
       bookingUnits: {},
+      error: null, 
     };
   },
   async created() {
     try {
       const [unitTypesData, bookingUnitsData] = await Promise.all([
-        getUnitTypes(),
-        getBookingUnits(),
+        getUnitTypeInfoRequest(),
+        getBookingUnitsRequest(),
       ]);
 
       this.unitTypes = unitTypesData;
@@ -49,6 +51,7 @@ export default {
       }, {});
     } catch (error) {
       console.error('Error fetching data:', error);
+      this.error = 'Failed to fetch data. Please try again later.'
     }
   },
 };

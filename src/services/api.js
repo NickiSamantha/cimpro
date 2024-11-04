@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://demo.ix.cimsoweb.com';
+const API_BASE_URL = '/api';
 
 const headers = {
   Authorization: JSON.stringify({
@@ -11,9 +11,12 @@ const headers = {
   'Content-Type': 'application/json',
 };
 
-export const getUnitTypes = async () => {
+export const getUnitTypeInfoRequest = async () => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/unit_type_info_request`, { hg_code: "demo", payload: {} }, { headers });
+    const response = await axios.post(
+      `${API_BASE_URL}/unit_type_info_request`, 
+      { hg_code: "demo", payload: {} },
+       { headers });
     return response.data.payload["Unit Types"];
   } catch (error) {
     throw new Error("Failed to fetch unit types");
@@ -21,7 +24,7 @@ export const getUnitTypes = async () => {
 };
 
 
-export const getBookingUnits = async () => {
+export const getBookingUnitsRequest = async () => {
   try {
     const response = await axios.post(
       `${API_BASE_URL}/get_booking_units_request`,
