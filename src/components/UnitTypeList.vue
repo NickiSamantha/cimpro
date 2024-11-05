@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <h1>Unit Types</h1> -->
+     <h1>All Unit Types and Available Booking Units </h1> 
      <div v-if="error">{{ error }}</div> 
     <ul v-else>
       <li v-for="unitType in unitTypes" :key="unitType['Unit Type ID']">
@@ -17,13 +17,13 @@
           </li>
         </ul>
       </li>
-    </ul>
+    </ul> 
   </div>
 </template>
 
 <script>
-import { getUnitTypeInfoRequest, getBookingUnitsRequest } from '../services/api.js';
-
+//import { getUnitTypeInfoRequest, getBookingUnitsRequest } from '../services/api.js';
+import { getUnitTypeInfoRequest , getBookingUnitsRequest } from '../services/api.js';
 export default {
   data() {
     return {

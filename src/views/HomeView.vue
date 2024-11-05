@@ -1,38 +1,42 @@
 <template>
   <div>
-    <h1>Unit Type Info Request</h1>
+    <!-- <h1>Unit Type Info Request</h1>
     <button @click="fetchUnitTypeInfo">Fetch Unit Type Info</button>
 
     <div v-if="unitTypeInfo">
-      <pre>{{ unitTypeInfo }}</pre> <!-- Displays raw JSON for reference -->
-    </div>
+      <pre>{{ unitTypeInfo }}</pre>  Displays raw JSON for reference 
+    </div> -->
 
-    <div v-else>
+    <!-- <div v-else>
       <p>No data fetched yet. Click the button to load data.</p>
-    </div>
+    </div> -->
+    <UnitTypeList/>
   </div>
 </template>
 
 <script>
-import { getUnitTypeInfoRequest } from '../services/api.js';
-
+//import { getUnitTypeInfoRequest } from '../services/api.js';
+import UnitTypeList from '../components/UnitTypeList.vue'
 export default {
-  data() {
-    return {
-      unitTypeInfo: null, // Stores fetched data
-    };
-  },
-  methods: {
-    async fetchUnitTypeInfo() {
-      try {
-        const data = await getUnitTypeInfoRequest();
-        this.unitTypeInfo = data; // Save data to display
-      } catch (error) {
-        console.error('Error fetching Unit Type Info:', error);
-      }
-    },
-  },
-};
+  components: {
+    UnitTypeList
+  }
+  // data() {
+  //   return {
+  //     unitTypeInfo: [], // Stores fetched data
+  //   };
+  // },
+  //methods: {
+    // async fetchUnitTypeInfo() {
+    //   try {
+    //     const data = await getUnitTypeInfoRequest();
+    //     this.unitTypeInfo = data; // Save data to display
+    //   } catch (error) {
+    //     console.error('Error fetching Unit Type Info:', error);
+    //   }
+    // },
+  //}
+}
 </script>
 
 <style scoped>

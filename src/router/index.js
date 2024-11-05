@@ -1,7 +1,6 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue'; // Adjust based on your file structure
-import UnitTypeList from '../components/UnitTypeList.vue'; // Adjust based on your file structure
+import HomeView from '../views/HomeView.vue'; 
+import UnitTypeList from '../components/UnitTypeList.vue'; 
 
 const routes = [
   {
