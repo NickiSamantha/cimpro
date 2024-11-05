@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue'; 
 import UnitTypeList from '../components/UnitTypeList.vue'; 
+import UnitTypeTable from '@/components/UnitTypeTable.vue';
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/unit-types',
     name: 'unit-types',
     component: UnitTypeList,
+  },
+  {
+    path: '/unit-table',
+    name: 'unit-table',
+    component: UnitTypeTable,
   },
 ];
 

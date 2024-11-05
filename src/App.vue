@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <h1>Welcome to the App</h1>
+    <h1>Welcome to INNterchange Specifications </h1>
     <!-- <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/unit-types">View Unit Types</router-link>
     </nav> -->
     <router-view /> 
+    <UnitTypeTable/>
   </div>
 </template>
 
 <script>
+import UnitTypeTable from './components/UnitTypeTable.vue';
 export default {
-  name: 'App',
+  // name: 'App'
+  components: {
+    UnitTypeTable
+  }
 };
 </script>
 
