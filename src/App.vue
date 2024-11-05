@@ -5,17 +5,19 @@
       <router-link to="/">Home</router-link>
       <router-link to="/unit-types">View Unit Types</router-link>
     </nav> -->
-    <router-view /> 
     <UnitTypeTable/>
+    <UnitTypeList/>
   </div>
 </template>
 
 <script>
 import UnitTypeTable from './components/UnitTypeTable.vue';
+import UnitTypeList from './components/UnitTypeList.vue';
 export default {
   // name: 'App'
   components: {
-    UnitTypeTable
+    UnitTypeTable,
+    UnitTypeList
   }
 };
 </script>
