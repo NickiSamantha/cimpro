@@ -1,0 +1,119 @@
+/* Bootstrap icon */
+/* App */
+
+#app {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #030303;
+  }
+  
+  nav {
+    padding: 30px;
+  }
+  
+  nav a {
+    font-weight: bold;
+    color: #c0e9ed;
+  }
+  
+  nav a.router-link-exact-active {
+    color: #be2aa3;
+  }
+  
+  .navbar {
+    background: linear-gradient(
+      90deg,
+      #cdeddd,
+      #c0e9ed,
+      #fce6d3,
+      #fad9d5,
+      #fbb7c7
+    );
+  }
+
+  
+  /* logo */
+  img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    animation: hop 2s ease-in-out;
+    
+  }
+  img[alt="logo"] {
+    width: 5rem;
+    border: 1px solid pink;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    color: white;
+  }
+  
+  /* SCROLLBAR */
+ 
+  ::-webkit-scrollbar {
+    width: 20px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(
+      90deg,
+      #cdeddd,
+      #c0e9ed,
+      #fce6d3,
+      #fad9d5,
+      #fbb7c7
+    );
+   
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  
+      background: #e0a1b1;
+    
+    border-radius: 10px;
+    opacity: 1;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e0a1b1; 
+  }
+  
+  
+  /*wrapper*/
+  :is(.wrapper) {
+    background: linear-gradient(
+      90deg,
+      #cdeddd,
+      #c0e9ed,
+      #fce6d3,
+      #fad9d5,
+      #fbb7c7
+    );
+  }
+  /*Fonts*/
+  .display-1 {
+    font-family: "Lora", serif;
+  }
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "Lora", serif;
+  }
+
+  
+
+  /*MEDIA QUERIES*/
+  @media only screen and (max-width: 720px) {
+    .Bg {
+      flex-direction: column;
+    }
+    :is(.wrapper) {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+ 

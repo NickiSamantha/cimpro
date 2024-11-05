@@ -15,7 +15,7 @@ const routes = [
     component: UnitTypeList,
   },
   {
-    path: '/unit-table',
+    path: '/unit-type-table',
     name: 'unit-table',
     component: UnitTypeTable,
   },
