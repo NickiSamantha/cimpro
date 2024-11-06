@@ -38,4 +38,19 @@ export const getBookingUnitsRequest = async () => {
   }
 };
 
+export const getUnitTypeImage = async (objectUniqueId) => {
+  try {
+    const response = await axios.post(
+      `${API_BASE_URL}/binary_object_request`,
+      { hg_code: "demo", payload: { "Object Unique ID": objectUniqueId } },
+      { headers }
+    );
+    return response.data.payload; 
+  } catch (error) {
+    console.error("Error fetching unit type image:", error);
+    throw new Error("Failed to fetch unit type image");
+  }
+};
+
+
 

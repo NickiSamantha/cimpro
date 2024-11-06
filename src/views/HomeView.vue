@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container vh-100 d-flex flex-column justify-content-center align-items-center">
+  <div class="home-container d-flex flex-column justify-content-center align-items-center">
     <h1 class="home-title">Welcome to CiMSO INNterchange</h1>
   </div>
 </template>
@@ -16,6 +16,7 @@ export default {
   color: #fff;
   text-align: center;
   padding: 0 20px;
+  min-height: 93vh;
 }
 
 .home-title {
@@ -23,7 +24,8 @@ export default {
   font-size: 3rem;
   color: #ff99c8;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(248, 244, 246, 0.7);
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(248, 244, 246, 0.7);
 }
 
 

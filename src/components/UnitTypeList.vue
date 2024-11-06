@@ -1,5 +1,6 @@
 <template>
-  <div class=" mt-5 pt-5">
+  <div class="container">
+    <div class=" mt-5 pt-5">
     <h1 class="mt-5 page-title">All Unit Types and Available Booking Units</h1>
     <div v-if="error" class="error-message">{{ error }}</div>
     <ul v-else class="unit-list">
@@ -32,6 +33,8 @@
       </li>
     </ul>
   </div>
+  </div>
+ 
 </template>
 
 <script>
@@ -43,13 +46,12 @@ export default {
       unitTypes: [],
       bookingUnits: {},
       error: null,
-      showBookings: {} // Track visibility for each unit type's booking units
+      showBookings: {} 
     };
   },
   
   methods: {
     toggleBookingUnits(unitTypeId) {
-      // Toggle the visibility for the given unit type ID
       this.showBookings[unitTypeId] = !this.showBookings[unitTypeId];
     },
   },
@@ -63,7 +65,6 @@ export default {
 
       this.unitTypes = unitTypesData;
 
-      // Organize booking units by Unit Type ID 
       this.bookingUnits = bookingUnitsData.reduce((acc, unit) => {
         if (!acc[unit['Unit Type ID']]) {
           acc[unit['Unit Type ID']] = [];
