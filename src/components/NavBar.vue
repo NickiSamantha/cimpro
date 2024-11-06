@@ -19,7 +19,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="text-white p-2" style="font-size:30px;"> &#9776; </span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">

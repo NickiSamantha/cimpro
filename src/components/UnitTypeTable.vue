@@ -4,17 +4,20 @@
     <button class="cute-button" @click="fetchUnitTypes">Fetch Unit Type</button>
     <button class="cute-button" @click="fetchBookingUnits">Fetch Booking Units</button>
 
-    <!-- Search Input -->
-    <input
-      v-if="displayType"
-      v-model="searchQuery"
-      placeholder="Search by ID or name"
-      @input="search"
-      class="search-input"
-    />
+    <!-- Search Bar -->
+     <div>
+      <input
+     v-if="displayType"
+     v-model="searchQuery"
+     placeholder="Search by ID or name"
+     @input="search"
+     class="search-input"
+   />  </div>
+   
 
-    <!-- Display Unit Types Table -->
-    <table v-if="displayType === 'unitTypes' && filteredUnitTypes.length" class="cute-table">
+    <!--Unit Types Table -->
+     <div class="cute-table-container">
+      <table v-if="displayType === 'unitTypes' && filteredUnitTypes.length" class="cute-table">
       <thead>
         <tr>
           <th>Unit Type ID</th>
@@ -38,9 +41,10 @@
         </tr>
       </tbody>
     </table>
-
-    <!-- Display Booking Units Table -->
-    <table v-if="displayType === 'bookingUnits' && filteredBookingUnits.length" class="cute-table">
+     </div> 
+    <!--  Booking Units Table -->
+      <div class="cute-table-container">
+        <table v-if="displayType === 'bookingUnits' && filteredBookingUnits.length" class="cute-table">
       <thead>
         <tr>
           <th>Booking Unit ID</th>
@@ -58,6 +62,8 @@
         </tr>
       </tbody>
     </table>
+      </div>
+    
   </div>
 </template>
 
@@ -119,9 +125,9 @@ filteredBookingUnits() {
 
 <style scoped>
 .cute-button {
-  background-color: #ffccde; /* Light pink */
-  border: 1px solid #ff99c8; /* Medium pink border */
-  color: #333; /* Dark text */
+  background-color: #ffccde; 
+  border: 1px solid #ff99c8; 
+  color: #000000; 
   padding: 10px 20px;
   margin: 5px;
   font-weight: bold;
@@ -131,16 +137,21 @@ filteredBookingUnits() {
 }
 
 .cute-button:hover {
-  background-color: #ff99c8; /* Darker pink on hover */
+  background-color: #ff99c8; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search-input {
-  margin: 10px 0;
-  padding: 8px;
+  padding: 10px ;
+  margin: 20px;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  width: 100%;
+  border: 1px solid #ff09c8 ;
+  
+}
+.cute-table-container {
+  width: 100% ; 
+  overflow-x: auto ; 
+  margin-top: 20px ; 
 }
 
 .cute-table {
@@ -148,25 +159,41 @@ filteredBookingUnits() {
   border-collapse: collapse;
   margin-top: 20px;
   font-size: 16px;
+  min-width: 600px ; 
 }
 
 .cute-table th, .cute-table td {
   padding: 12px;
-  border: 1px solid #000;
+  border: 1px solid #ff99c8;
   text-align: left;
 }
 
 .cute-table th {
-  background-color: #ffe6f0; /* Very light pink */
-  color: #333;
+  background-color: #646464; /* Very light pink */
+  color: #f5ebeb;
   font-weight: bold;
 }
 
 .cute-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #363434;
 }
 
 .cute-table tr:hover {
-  background-color: #ffebf5; /* Very light pink on hover */
+  background-color: #ff99c8;
+  color: #000000 ; 
+}
+
+/* Responsive Layout for Table  */
+@media (max-width: 768px) {
+  .cute-button {
+    width: 100%; 
+    margin: 10px 0 ;
+  }
+  .search-input {
+    
+  }
+  .cute-table th, .cute-table td {
+    padding: 8px; 
+  }
 }
 </style>

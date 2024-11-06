@@ -1,119 +1,163 @@
-/* Bootstrap icon */
 /* App */
 
 #app {
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #030303;
-  }
-  
-  nav {
-    padding: 30px;
-  }
-  
-  nav a {
-    font-weight: bold;
-    color: #c0e9ed;
-  }
-  
-  nav a.router-link-exact-active {
-    color: #be2aa3;
-  }
-  
-  .navbar {
-    background: linear-gradient(
-      90deg,
-      #cdeddd,
-      #c0e9ed,
-      #fce6d3,
-      #fad9d5,
-      #fbb7c7
-    );
-  }
+    color: #fcf9f9;  
+}
 
-  
-  /* logo */
-  img {
-    aspect-ratio: 1;
-    object-fit: cover;
-    animation: hop 2s ease-in-out;
+nav {
+    padding: 20px;
+    background-color: #ffffff; 
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #f7f2f2;
+}
+
+.nav-link:hover{
+    color:#ff99c8;
+}
+.navbar-toggler {
+    color: #f7f2f2;
+}
+
+nav a.router-link-exact-active {
+    color: #ff6fae; 
+}
+
+.navbar {
+    background-color: #0f0f0f;
     
-  }
-  img[alt="logo"] {
+}
+nav a.router-link:hover {
+    color: #ffffff !important;
+}
+
+/* Logo */
+img[alt="logo"] {
     width: 5rem;
-    border: 1px solid pink;
+    border: 1px solid #ffffff;
     cursor: pointer;
-  }
-  
-  .btn:hover {
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    /* background-color: #ff6fae; */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #ff4d8c;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff99c8;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff6fae;
+}
+
+/* Wrapper */
+:is(.wrapper) {
+    background-color: #000000; 
+    }
+
+/* Typography */
+.page-title {
+     
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1em;
+}
+
+.unit-title {
+    font-size: 1.25rem;
+    color: #f7f5f5;
+    margin: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #ff99c8;
+    font-weight: 700;
+}
+
+.unit-detail {
+    color: #fdfdfd;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.toggle-button {
+    background-color: #ff6fae;
     color: white;
-  }
-  
-  /* SCROLLBAR */
- 
-  ::-webkit-scrollbar {
-    width: 20px; 
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: linear-gradient(
-      90deg,
-      #cdeddd,
-      #c0e9ed,
-      #fce6d3,
-      #fad9d5,
-      #fbb7c7
-    );
-   
-  }
-  
-  ::-webkit-scrollbar-thumb {
-  
-      background: #e0a1b1;
-    
-    border-radius: 10px;
-    opacity: 1;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #e0a1b1; 
-  }
-  
-  
-  /*wrapper*/
-  :is(.wrapper) {
-    background: linear-gradient(
-      90deg,
-      #cdeddd,
-      #c0e9ed,
-      #fce6d3,
-      #fad9d5,
-      #fbb7c7
-    );
-  }
-  /*Fonts*/
-  .display-1 {
-    font-family: "Lora", serif;
-  }
-  h2,
-  h3,
-  h4,
-  p {
-    font-family: "Lora", serif;
-  }
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+}
 
-  
+.toggle-button:hover {
+    background-color: #ff4d8c;
+}
 
-  /*MEDIA QUERIES*/
-  @media only screen and (max-width: 720px) {
-    .Bg {
-      flex-direction: column;
+/* Booking Unit List */
+.booking-unit-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.booking-unit-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4d8c;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ff99c8;
+    background-color: #ffe6ef;
+    border-radius: 8px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 720px) {
+    .wrapper {
+        width: 100%;
+        overflow: hidden;
     }
-    :is(.wrapper) {
-      width: 100%;
-      overflow: hidden;
-    }
-  }
- 
+  
+} 
+
+.navbar-toggler-icon {
+        color: #ffffff !important ; 
+
+    } 

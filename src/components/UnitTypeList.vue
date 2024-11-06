@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5 pt-5">
+  <div class=" mt-5 pt-5">
     <h1 class="mt-5 page-title">All Unit Types and Available Booking Units</h1>
     <div v-if="error" class="error-message">{{ error }}</div>
     <ul v-else class="unit-list">
@@ -82,7 +82,7 @@ export default {
 <style scoped>
 .page-title {
   font-size: 2em;
-  color: #333;
+  color:#ffffff;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -118,7 +118,7 @@ export default {
 
 .unit-title {
   font-size: 1.5em;
-  color: #333;
+  color: black;
   margin: 0 0 10px;
   border-bottom: 1px solid #ff99c8;
   padding-bottom: 5px;
@@ -126,21 +126,21 @@ export default {
 
 .unit-detail {
   margin: 5px 0;
-  color: #555;
+  color: #000000;
 }
 
 .toggle-button {
   margin-left: 10px;
   padding: 5px 10px;
   background-color: #ff99c8;
-  color: white;
+  color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .toggle-button:hover {
-  background-color: #ff80a0;
+  background-color: #ff99c8;
 }
 
 .booking-unit-list {
@@ -154,7 +154,7 @@ export default {
   padding: 10px;
   border-radius: 5px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  color: #333;
+  border: 1px solid #ff09c8;
+  color: #0f0f0f;
 }
 </style>

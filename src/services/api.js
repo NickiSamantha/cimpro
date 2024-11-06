@@ -37,3 +37,5 @@ export const getBookingUnitsRequest = async () => {
     throw new Error("Failed to fetch booking units");
   }
 };
+
+
